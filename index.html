@@ -331,6 +331,60 @@
         border: 0;
       }
 
+      /* ===== FAQ (Accordion) ===== */
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .faq-item {
+        border: 1px solid #eee;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .faq-item summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 16px 20px;
+        font-weight: 700;
+        color: var(--ink);
+        position: relative;
+        transition: background 0.2s ease;
+      }
+      .faq-item summary::marker {
+        display: none;
+      }
+      .faq-item summary::after {
+        content: "+";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 900;
+        color: var(--pink-strong);
+        transition: transform 0.2s ease;
+      }
+      .faq-item[open] summary::after {
+        content: "−";
+        transform: translateY(-50%) rotate(180deg);
+      }
+      .faq-item summary:hover {
+        background: var(--pink-soft-2);
+      }
+      .faq-item p {
+        margin: 0;
+        padding: 0 20px 16px;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 0.95rem;
+        border-top: 1px solid #f1f1f1;
+        background: #fff;
+      }
+
       /* FOOTER */
       footer {
         background: #222;
