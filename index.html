@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Trials Girls Meeting 2025</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink-strong: #e91e63;
+        --pink-grad-start: #ff2d7a;
+        --pink-grad-end: #ff7bb8;
+        --pink-soft: #fff0f6;
+        --pink-soft-2: #fff8fb;
+        --ink: #222;
+        --muted: #666;
+        --shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        font-family: "Noto Sans JP", sans-serif;
+        color: var(--ink);
+        background: #fff;
+        scroll-behavior: smooth;
+      }
+      a {
+        color: var(--pink-strong);
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* HERO */
+      header {
+        position: relative;
+        background: linear-gradient(180deg, var(--pink-soft), #fff 70%);
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero {
+        padding: 90px 20px 80px;
+        position: relative;
+      }
+      .alert-banner {
+        display: inline-block;
+        background: var(--pink-strong);
+        color: #fff;
+        font-weight: 900;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+        padding: 10px 32px;
+        border-radius: 6px;
+        box-shadow: 0 3px 0 #b4164a, 4px 4px 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 40px;
+        left: 20%;
+        transform: translateX(-50%) rotate(-13deg);
+        text-transform: uppercase;
+        z-index: 2;
+        border: 2px solid #fff;
+      }
+      .alert-banner::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 8px;
+        background: rgba(0, 0, 0, 0.1);
+        bottom: -6px;
+        left: 20%;
+        transform: rotate(3deg);
+        filter: blur(1px);
+        opacity: 0.3;
+      }
+      .logo-img {
+        width: 340px;
+        max-width: 80%;
+        filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.1));
+        margin-top: -40px;
+      }
+      h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(46px, 6.5vw, 90px);
+        margin: 25px 0 10px;
+        letter-spacing: 0.05em;
+      }
+      h1 .girls {
+        color: var(--pink-strong);
+      }
+      .hero-date {
+        font-size: clamp(26px, 3.2vw, 36px);
+        font-weight: 900;
+        color: var(--pink-strong);
+        margin: 8px 0 16px;
+        letter-spacing: 0.04em;
+      }
+      .hero-sub {
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .badge {
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 999px;
+        padding: 10px 16px;
+        margin: 6px;
+        box-shadow: var(--shadow);
+      }
+
+      /* 共通セクション */
+      section {
+        padding: 70px 0;
+        border-top: 1px solid #eee;
+      }
+      section.alt {
+        background: var(--pink-soft-2);
+      }
+      h2 {
+        font-size: clamp(26px, 4vw, 36px);
+        color: var(--pink-strong);
+      }
+      .lead {
+        color: var(--muted);
+        line-height: 1.9;
+        font-size: 1.05rem;
+      }
+      .grid {
+        display: grid;
+        gap: 22px;
+      }
+      @media (min-width: 900px) {
+        .grid-2 {
+          grid-template-columns: 1.3fr 0.7fr;
+        }
+        .grid-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-2-venue {
+          grid-template-columns: 0.8fr 1.2fr;
+        }
+        .grid-coach {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+      }
+      .kicker {
+        font-weight: 800;
+        color: var(--pink-strong);
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+      ul.clean {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      ul.clean li {
+        padding: 10px 0;
+        border-bottom: 1px dashed #eee;
+      }
+      ul.clean li:last-child {
+        border-bottom: 0;
+      }
+      .pill {
+        display: inline-block;
+        padding: 6px 10px;
+        border: 1px solid rgba(233, 30, 99, 0.2);
+        border-radius: 999px;
+        margin: 4px 6px 0 0;
+        color: var(--pink-strong);
+        background: rgba(233, 30, 99, 0.05);
+      }
+      .small {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      /* ===== COACH (Stylish) ===== */
+      .coach-grid {
+        display: grid;
+        gap: 24px;
+      }
+      @media (min-width: 900px) {
+        .coach-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .coach-card.modern {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 18px;
+        align-items: start;
+        background: #f7f7f9; /* 薄いグレーでソリッドに */
+        border: 1px solid #eaeaea;
+        border-radius: 16px;
+        padding: 18px 18px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .coach-card.modern::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px; /* ピンクの極細ラインで品よく */
+        background: linear-gradient(90deg, var(--pink-strong), #ff9cc5);
+      }
+      .coach-photo {
+        aspect-ratio: 4/3;
+        border-radius: 12px;
+        background: #ddd center/cover no-repeat;
+        /* filter: grayscale(90%) contrast(1.05); */
+        transition: filter 0.35s ease, transform 0.35s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .coach-card.modern:hover .coach-photo {
+        filter: none;
+        transform: translateY(-2px);
+      }
+      .coach-meta {
+        padding: 6px 4px;
+      }
+      .coach-name {
+        font-family: "Bebas Neue", system-ui, sans-serif;
+        letter-spacing: 0.04em;
+        font-size: clamp(26px, 3vw, 34px);
+        margin: 0 0 2px;
+      }
+      .coach-title {
+        color: #7a7a7a;
+        font-size: 0.96rem;
+        margin: 0 0 10px;
+      }
+      .coach-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 10px 0 0;
+      }
+      .coach-badge {
+        border: 1px solid #e6e6e6;
+        background: #fff;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 0.86rem;
+      }
+      .coach-note {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-top: 10px;
+      }
+
+      /* MAP */
+      .map-wrap {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        box-shadow: var(--shadow);
+      }
+      .map-wrap.large {
+        height: 520px;
+      }
+      @media (max-width: 899px) {
+        .map-wrap.large {
+          height: 360px;
+        }
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #222;
+        color: #ccc;
+        text-align: center;
+        padding: 40px 0 60px;
+        font-size: 14px;
+      }
+      /* SCHEDULE（スケジュールを等幅に） */
+      #schedule .grid.grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* ← 等幅に統一 */
+        gap: 22px;
+      }
+      @media (max-width: 899px) {
+        #schedule .grid.grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="hero wrap">
+        <div class="alert-banner">緊急開催！</div>
+        <img
+          class="logo-img"
+          src="./images/logo.png"
+          alt="Girls meets Trials ロゴ"
+        />
+        <h1>Trials <span class="girls">Girls</span> Meeting 2025</h1>
+        <p class="hero-date">2025年11月1日（土）・2日（日）</p>
+        <p class="hero-sub">
+          ＠蓼科トライアルパーク<br />
+          参加費無料／見学自由／女子トライアルの交流イベント
+        </p>
+        <div class="hero-badges">
+          <span class="badge">Day1：コーチによるトレーニング</span>
+          <span class="badge">Day2：フリートレーニング＆ミニコンペ</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ABOUT -->
+      <section id="about" class="alt">
+        <div class="wrap grid grid-2">
+          <div>
+            <h2>女の子が主役の2日間</h2>
+            <p class="lead">
+              レベルに合わせたレッスンと、自由練習のあとにミニコンペ。<strong>見学は自由</strong>なので、初めての方や保護者の方もお気軽にどうぞ。<br /><br />
+              このイベントは、全国で自転車トライアルに挑戦する女子ライダーたちが集まり、
+              お互いを応援し合いながら技術を磨く機会として企画されました。
+              コーチによるアドバイスやライディング体験だけでなく、
+              参加者同士の交流や情報交換を通じて、
+              トライアルをもっと身近に、もっと楽しく感じてもらうことを目的としています。
+            </p>
+
+            <div class="card" style="margin-top: 20px">
+              <div class="kicker">プログラム</div>
+              <ul class="clean">
+                <li>
+                  <strong>1日目（11/1）</strong
+                  >：コーチによるトレーニングセッション（基礎／ステアケース／セクション攻略）
+                </li>
+                <li>
+                  <strong>2日目（11/2）</strong>：フリートレーニング、
+                  ミニコンペ（軽い大会形式）
+                </li>
+              </ul>
+              <div style="margin-top: 10px">
+                <span class="pill">参加費無料</span>
+                <span class="pill">初心者OK</span>
+                <span class="pill">保護者見学歓迎</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="kicker">開催情報</div>
+            <ul class="clean">
+              <li><strong>日程</strong>：2025年11月1日（土）〜2日（日）</li>
+              <li><strong>場所</strong>：蓼科トライアルパーク</li>
+              <li><strong>住所</strong>：長野県茅野市豊平4218-1</li>
+              <li>
+                <strong>アクセス</strong>：中央道
+                諏訪南ICから約20分／諏訪ICから約25分
+              </li>
+              <li><strong>対象</strong>：小学生〜高校生の女子（見学自由）</li>
+              <li>
+                <strong>持ち物</strong
+                >：自転車・ヘルメット・グローブ・動きやすい服装・飲料
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- COACH (Stylish) -->
+      <section id="coach" style="background: #fff">
+        <div class="wrap">
+          <h2
+            style="
+              text-align: center;
+              letter-spacing: 0.04em;
+              margin-bottom: 6px;
+            "
+          >
+            COACHES
+          </h2>
+          <p class="lead" style="text-align: center; margin: 0 0 44px">
+            世界大会を経験した若手ライダーがその経験を元に、自転車トライアルの技術と楽しい雰囲気でサポートします。
+          </p>
+
+          <div class="coach-grid">
+            <!-- Coach 1 -->
+            <article class="coach-card modern">
+              <div
+                class="coach-photo"
+                style="background-image: url('./images/kanoka.jpg')"
+              ></div>
+              <div class="coach-meta">
+                <h3 class="coach-name">板谷 彼香</h3>
+                <p class="coach-title">
+                  '24 WorldYouthGames Girls 4位<br />'25 WorldYouthGames
+                  GirlsU16 4位
+                </p>
+              </div>
+            </article>
+
+            <!-- Coach 2 -->
+            <article class="coach-card modern">
+              <div
+                class="coach-photo"
+                style="background-image: url('./images/haruka.jpg')"
+              ></div>
+              <div class="coach-meta">
+                <h3 class="coach-name">板谷 遥香</h3>
+                <p class="coach-title">
+                  '23 WorldYouthGames YouthGirls 1位<br />'25 WorldYouthGames
+                  GirlsU13 4位
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- VENUE -->
+      <section id="venue">
+        <div class="wrap grid grid-2-venue">
+          <div>
+            <h2>会場アクセス</h2>
+            <p class="lead">
+              八ヶ岳の麓にある自然豊かな自転車トライアル専用コース。駐車場・トイレ完備で、見学もしやすい環境です。<br />
+              昼食はパークに隣接しているトライアルパークキッチンで蓼科バーガーをどうぞ。
+            </p>
+            <p><strong>会場：</strong>蓼科トライアルパーク</p>
+            <p><strong>住所：</strong>長野県茅野市豊平4218-1</p>
+            <p>
+              <strong>アクセス：</strong><br />
+              中央自動車道 <strong>諏訪南IC</strong> より約20分／<strong
+                >諏訪IC</strong
+              >
+              より約25分<br />
+              ※所要時間は交通状況により変動します。
+            </p>
+          </div>
+
+          <div class="map-wrap large" aria-label="蓼科トライアルパークの地図">
+            <iframe
+              title="蓼科トライアルパークの地図"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=%E8%93%BC%E7%A7%91%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%83%91%E3%83%BC%E3%82%AF&hl=ja&z=14&output=embed"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHEDULE -->
+      <section id="schedule" class="alt">
+        <div class="wrap">
+          <h2>スケジュール</h2>
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="kicker">11/1（土）トレーニングDAY</div>
+              <ul class="clean">
+                <li>09:00 オリエンテーション、準備運動</li>
+                <li>
+                  09:30 コーチによるトレーニングセッション（基礎を中心に）
+                </li>
+                <li>12:00 ランチ休憩</li>
+                <li>13:00 セクションを想定したトレーニング・アドバイス</li>
+                <li>15:00 ティーブレイク</li>
+                <li>15:30 フリーセッション</li>
+                <li>17:00 クロージング</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="kicker">11/2（日）フリー＆ミニコンペDAY</div>
+              <ul class="clean">
+                <li>09:00 オリエンテーション、準備運動</li>
+                <li>09:30 フリートレーニング開始</li>
+                <li>11:00 保護者向けルール・審判講習</li>
+                <li>12:00 ランチ休憩</li>
+                <li>13:00 ミニコンペスタート</li>
+                <li>15:00 ティーブレイク</li>
+                <li>15:30 ミニコンペおさらい練習</li>
+                <li>17:00 クロージング</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>© 2025 Trials Girls Meeting</p>
+        <p class="small">
+          見学は自由です。天候や安全により一部プログラムを変更する場合があります。
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
