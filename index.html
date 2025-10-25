@@ -385,6 +385,67 @@
         background: #fff;
       }
 
+      /* ===== SNACK TIME ===== */
+      .snack-time {
+        margin-top: 40px;
+        text-align: center;
+      }
+      .snack-card {
+        display: inline-block;
+        background: linear-gradient(180deg, #fff8fb, #fff);
+        border: 1px solid #f2d7e2;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 30px 24px;
+        max-width: 700px;
+      }
+      .snack-card h3 {
+        color: var(--pink-strong);
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+      }
+      .snack-card p {
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* BBQセクション 横並び（微調整） */
+      .grid-bbq {
+        display: grid;
+        gap: 26px;
+        align-items: center;
+      }
+      @media (min-width: 900px) {
+        .grid-bbq {
+          grid-template-columns: 1.4fr 0.9fr;
+        }
+      }
+
+      /* イラストのスタイル */
+      .bbq-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 800px;
+      }
+      .bbq-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        transform: rotate(-2.5deg); /* ← 軽く傾ける */
+      }
+
+      /* ホバー時にちょっと動く演出 */
+      .bbq-image:hover img {
+        transform: rotate(0deg) scale(1.02);
+        box-shadow: 0 18px 30px rgba(0, 0, 0, 0.15);
+      }
+
       /* FOOTER */
       footer {
         background: #222;
@@ -579,7 +640,7 @@
                 </li>
                 <li>12:00 ランチ休憩</li>
                 <li>13:00 セクションを想定したトレーニング・アドバイス</li>
-                <li>15:00 ティーブレイク</li>
+                <li>15:00 もぐもぐタイム</li>
                 <li>15:30 フリーセッション</li>
                 <li>17:00 クロージング</li>
               </ul>
@@ -592,10 +653,74 @@
                 <li>11:00 保護者向けルール・審判講習</li>
                 <li>12:00 ランチ休憩</li>
                 <li>13:00 ミニコンペスタート</li>
-                <li>15:00 ティーブレイク</li>
+                <li>15:00 もぐもぐタイム</li>
                 <li>15:30 ミニコンペおさらい練習</li>
                 <li>17:00 クロージング</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOGUMOGU TIME INFO -->
+        <div class="snack-time">
+          <div class="card">
+            <div class="card-content">
+              <h3>🍪 もぐもぐタイムについて</h3>
+              <p>
+                午後の休憩時間に「もぐもぐタイム」を設けます。<br />
+                参加者のみなさんの<strong>地元の銘菓を持ち寄って</strong>、楽しくおやつを食べながら交流しましょう。<br />
+                走行の合間に、甘いものでリフレッシュ！お気に入りのお菓子をぜひご紹介ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BBQ & TALK NIGHT -->
+      <section id="bbq" class="alt">
+        <div class="wrap">
+          <h2 style="text-align: center; letter-spacing: 0.05em">
+            BBQ & Talk Night
+          </h2>
+          <p class="lead" style="text-align: center; margin-bottom: 40px">
+            練習や大会ではゆっくり話す時間も少ないから。<br />
+            夕暮れの中、食べて笑って、語り合いましょう。
+          </p>
+
+          <div class="grid grid-bbq">
+            <!-- Text -->
+            <div>
+              <div
+                class="card"
+                style="background: #fff; border: 1px solid #eee"
+              >
+                <div style="padding: 24px">
+                  <p
+                    style="
+                      color: var(--muted);
+                      line-height: 1.8;
+                      font-size: 0.98rem;
+                    "
+                  >
+                    1日の夜の夕食はみんなで火を囲むBBQスタイルで楽しみましょう！<br />
+                    蓼科の美味しい食材を食べながら、ジュースやソフトドリンクを片手に（大人はお酒も）仲間と語り合うひとときを過ごしましょう。<br /><br />
+                    食材の買い出しは、<strong>日中に手が空いている方々で</strong>行う予定です。<br />
+                    <strong>参加費は実費</strong
+                    >となりますので、買い出しに出る前までにお申し出ください。<br /><br />
+                    火を囲んで話す時間は、きっと忘れられない思い出になります。<br />
+                    ぜひお気軽にご参加ください！
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="bbq-image">
+              <img
+                src="images/bbq.png"
+                alt="夕暮れのBBQイラスト"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
